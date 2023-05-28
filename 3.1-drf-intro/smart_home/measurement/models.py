@@ -15,6 +15,9 @@ class Measurement(models.Model):
         auto_now_add=True, verbose_name="Дата и время измерения"
     )
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
-
-    # def __str__(self):
-    #     return f"Measurement id: {self.id}, temperature: {self.temperature}"
+    photo = models.ImageField(
+        upload_to="measurement_photos/",
+        blank=True,
+        null=True,
+        verbose_name="Фотография помещения",
+    )
