@@ -34,7 +34,7 @@ DELETE {{baseUrl}}/products/1/
 Content-Type: application/json
 
 ###
-
+_________________________________________________________________________
 # поиск продуктов по названию и описанию
 GET {{baseUrl}}/products/?search=помидор
 Content-Type: application/json
