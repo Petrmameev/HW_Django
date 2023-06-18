@@ -20,6 +20,6 @@ class AdvertisementViewSet(ModelViewSet):
 
         if self.action in ["create"]:
             return [IsAuthenticated()]
-        if self.action in ["update", "partial_update"]:
+        if self.action in ["update", "partial_update", "destroy"]:
             return [IsOwnerOrReadOnly]
         return []
